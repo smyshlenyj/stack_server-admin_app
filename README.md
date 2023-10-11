@@ -6,6 +6,7 @@ std::string serverAddress = "192.168.186.129";
 
 Подключение в БД такое (DBHandler.cpp на сервере stack_server-admin_app):
 
+```
     sdb = QSqlDatabase::addDatabase("QMYSQL", dbName);
     sdb.setHostName(HOSTNAME);
     sdb.setDatabaseName(DATABASENAME);
@@ -18,6 +19,7 @@ std::string serverAddress = "192.168.186.129";
 #define DATABASENAME "chatDB"
 #define USERNAME "root"
 #define PASSWORD "777"
+```
 
 Сервер создаст таблицы сам, если не найдёт.
 В корневой директории репозитория сервера лежат два файла .sql для наполнения базы тестовыми данными.
