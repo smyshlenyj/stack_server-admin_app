@@ -1,4 +1,5 @@
 Клиент (windows, visual studio / linux, cmake) https://github.com/smyshlenyj/chat_gui/
+
 Сервер (linux, QT) https://github.com/smyshlenyj/stack_server-admin_app
 
 Подключение к серверу настраивается в клиенте в Connection.cpp (клиент chat-gui):
