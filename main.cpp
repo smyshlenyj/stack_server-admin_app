@@ -12,7 +12,6 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    ;
     Data dataHandlerServer;
 
     std::shared_ptr<bool> activeSession{std::make_shared<bool>(false)};

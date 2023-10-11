@@ -37,6 +37,8 @@ public:
     bool uniqueLogin(QString const&);
     bool addUser(QString const&, QString const&, QString const&);
     int checkForban(QString const &);
+    void banUser(QString const &);
+    void unbanUser(QString const &);
 };
 
 QString hashPassword(const std::string&);

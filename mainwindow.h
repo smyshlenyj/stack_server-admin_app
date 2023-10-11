@@ -16,6 +16,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr, std::shared_ptr<bool> session = nullptr);
     ~MainWindow();
+    void updateUserInfo();
 
 private slots:
     void on_listWidgetUsers_itemClicked(QListWidgetItem *item);
@@ -24,10 +25,18 @@ private slots:
 
     void on_pushButtonDeactivate_clicked();
 
+    void on_listWidgetRecepient_itemClicked(QListWidgetItem *item);
+
+    void on_pushButtonBan_clicked();
+
+    void on_pushButtonUnban_clicked();
+
 private:
     Ui::MainWindow *ui;
     Data dataBaseHandler;
     std::shared_ptr<bool> activeSession;
     QString currentuser;
+    QString sender;
+    QString recepient;
 };
 #endif // MAINWINDOW_H

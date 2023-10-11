@@ -25,12 +25,14 @@ void Data::closeData()
 void Data::createDataTable()
 {
     QSqlQuery query(sdb);
-    const QString queryText
-        = "CREATE TABLE IF NOT EXISTS users (login varchar(100) not null,	"
-          "name varchar(100), hashedPassword varchar(100), banned tinyint(1)) \n"
-          "CREATE TABLE IF NOT EXISTS messages (sender varchar(100) not null, "
-          "recepient varchar(100), message varchar(500))";
-    query.exec(queryText);
+    const QString queryTextUsers
+        = "CREATE TABLE IF NOT EXISTS users (login varchar(100) not null,"
+          "name varchar(100), hashedPassword varchar(100), banned tinyint(1) DEFAULT 0)";
+
+    query.exec(queryTextUsers);
+    const QString queryTextMessages
+        = "CREATE TABLE IF NOT EXISTS messages (sender varchar(100) not null, recepient "
+          "varchar(100), message varchar(500))";
 }
 
 QString hashPassword(const std::string &_password)
@@ -150,7 +152,7 @@ bool Data::uniqueLogin(QString const& login)
     {
         query.next();
 
-        if (query.size() == 1)
+        if (query.size() == 0)
             return true;
         else
             return false;
@@ -177,4 +179,18 @@ int Data::checkForban(QString const &login)
         return query.value(0).toInt();
     } else
         return false;
+}
+
+void Data::banUser(QString const &user)
+{
+    QSqlQuery query(sdb);
+    const QString queryText = "UPDATE users SET banned = 1 WHERE login = '" + user + "'";
+    query.exec(queryText);
+}
+
+void Data::unbanUser(QString const &user)
+{
+    QSqlQuery query(sdb);
+    const QString queryText = "UPDATE users SET banned = 0 WHERE login = '" + user + "'";
+    query.exec(queryText);
 }

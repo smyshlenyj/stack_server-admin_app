@@ -18,8 +18,28 @@
     <bool>true</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="2">
-     <widget class="QListWidget" name="listWidgetInfo"/>
+    <item row="6" column="0">
+     <widget class="QPushButton" name="pushButtonDeactivate">
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+color : rgb(0, 0, 0);
+background-color : rgb(248, 228, 92);
+}</string>
+      </property>
+      <property name="text">
+       <string>Close active user session</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Recepient:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="6">
+     <widget class="QListWidget" name="listWidgetMessages"/>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label">
@@ -28,14 +48,7 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QListWidget" name="listWidgetUsers">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="2">
+    <item row="6" column="5">
      <widget class="QPushButton" name="pushButtonQuit">
       <property name="styleSheet">
        <string notr="true">QPushButton { 
@@ -49,26 +62,15 @@ background-color : rgb(237, 51, 59);
       </property>
      </widget>
     </item>
-    <item row="0" column="2">
+    <item row="0" column="5">
      <widget class="QLabel" name="label_3">
       <property name="text">
        <string>User info:</string>
       </property>
      </widget>
     </item>
-    <item row="6" column="0">
-     <widget class="QPushButton" name="pushButtonDeactivate">
-      <property name="styleSheet">
-       <string notr="true">QPushButton { 
-color : rgb(0, 0, 0);
-font-weight: bold;
-background-color : rgb(248, 228, 92);
-}</string>
-      </property>
-      <property name="text">
-       <string>Close active user session</string>
-      </property>
-     </widget>
+    <item row="1" column="3" rowspan="3">
+     <widget class="QListWidget" name="listWidgetRecepient"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_2">
@@ -77,18 +79,58 @@ background-color : rgb(248, 228, 92);
       </property>
      </widget>
     </item>
-    <item row="4" column="0" colspan="3">
-     <widget class="QListWidget" name="listWidgetMessages"/>
+    <item row="1" column="5" rowspan="3">
+     <widget class="QListWidget" name="listWidgetInfo"/>
     </item>
-    <item row="1" column="1">
-     <widget class="QListWidget" name="listWidgetRecepient"/>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>Recepient:</string>
+    <item row="1" column="0" colspan="3">
+     <widget class="QListWidget" name="listWidgetUsers">
+      <property name="enabled">
+       <bool>true</bool>
       </property>
      </widget>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButtonBan">
+        <property name="styleSheet">
+         <string notr="true">QPushButton { 
+color : rgb(0, 0, 0);
+background-color : rgb(237, 51, 59);
+}</string>
+        </property>
+        <property name="text">
+         <string>Ban user</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonUnban">
+        <property name="styleSheet">
+         <string notr="true">QPushButton { 
+color : rgb(0, 0, 0);
+background-color : rgb(38, 162, 105);
+}</string>
+        </property>
+        <property name="text">
+         <string>Unban user</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
