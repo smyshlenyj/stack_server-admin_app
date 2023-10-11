@@ -3,6 +3,7 @@
 Сервер (linux, QT) https://github.com/smyshlenyj/stack_server-admin_app
 
 Подключение к серверу настраивается в клиенте в Connection.cpp (клиент chat-gui):
+
 std::string serverAddress = "192.168.186.129";
 
 Подключение в БД такое (DBHandler.cpp на сервере stack_server-admin_app):
