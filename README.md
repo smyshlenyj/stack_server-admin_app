@@ -1,3 +1,8 @@
+![chat_client](https://github.com/smyshlenyj/stack_server_admin_app/assets/103288354/00e46f53-c17a-4633-abbf-c7f9fe69620c)
+![image](https://github.com/smyshlenyj/stack_server_admin_app/assets/103288354/29298f49-0fa5-41cf-8ab4-91bacfe92347)
+
+
+
 Клиент (windows, visual studio / linux, cmake) https://github.com/smyshlenyj/chat_gui/
 
 Сервер (linux, QT) https://github.com/smyshlenyj/stack_server-admin_app
