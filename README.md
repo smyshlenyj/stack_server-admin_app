@@ -1,4 +1,5 @@
-![chat_client](https://github.com/smyshlenyj/stack_server_admin_app/assets/103288354/00e46f53-c17a-4633-abbf-c7f9fe69620c)
+![chat_client](https://github.com/smyshlenyj/stack_server_admin_app/assets/103288354/7c966d2b-23eb-416b-8484-041083298368)
+
 ![image](https://github.com/smyshlenyj/stack_server_admin_app/assets/103288354/29298f49-0fa5-41cf-8ab4-91bacfe92347)
 
 
